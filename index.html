@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="page">
+      <div class="container">
+        <header>
+          <h1>API Documentation for Blog laravel project</h1>
+          <a href="https://github.com/Mohamed-Helmy15/blog-app" target="_blank"
+            >Github Repo</a
+          >
+        </header>
+        <div class="section">
+          <h3>signup</h3>
+          <div class="content">
+            <p class="url">post → { /api/register }</p>
+            <div class="data">
+              <p class="state">name → required</p>
+              <p class="state">email → required</p>
+              <p class="state">role → optional → [default = "user"]</p>
+              <p class="state">is_partner → optional → [default = false]</p>
+              <p class="state">password → required</p>
+              <p class="state">password_confirmation → required</p>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <h3>login</h3>
+          <div class="content">
+            <p class="url">post → { /api/login }</p>
+            <div class="data">
+              <p class="state">email → required</p>
+              <p class="state">password → required</p>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <h3>logout</h3>
+          <div class="content">
+            <p class="url">post → { /api/logout }</p>
+          </div>
+        </div>
+        <div class="section">
+          <h3>forgot password</h3>
+          <div class="content">
+            <p class="url">post → { /api/forgot-password }</p>
+            <div class="data">
+              <p class="state">email → required</p>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <h3>reset password</h3>
+          <div class="content">
+            <p class="url">post → { /api/reset-password/{token} }</p>
+            <div class="data">
+              <p class="state">password → required</p>
+              <p class="state">password_confirmation → required</p>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <h3>current user</h3>
+          <div class="content">
+            <p class="url">get → { /api/user }</p>
+          </div>
+        </div>
+        <div class="section">
+          <h3>All users</h3>
+          <div class="content">
+            <p class="url">get → { /api/allusers }</p>
+          </div>
+        </div>
+        <div class="section">
+          <h3>All employers</h3>
+          <div class="content">
+            <p class="url">get → { /api/employers }</p>
+          </div>
+        </div>
+        <div class="section">
+          <h3>get employer</h3>
+          <div class="content">
+            <p class="url">get → { /api/employers/{id} }</p>
+          </div>
+        </div>
+        <div class="section">
+          <h3>create employer</h3>
+          <div class="content">
+            <p class="url">post → { /api/employers }</p>
+            <div class="data">
+              <p class="state">user_id → required</p>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <h3>edit employer</h3>
+          <div class="content">
+            <p class="url">patch → { /api/employers/{id} }</p>
+            <div class="data">
+              <p class="state">name → optional</p>
+              <p class="state">email → optional</p>
+              <p class="state">role → optional</p>
+              <p class="state">is_partner → optional</p>
+              <p class="state">password → optional</p>
+              <p class="state">
+                password_confirmation → required if there were password
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <h3>delete employer</h3>
+          <div class="content">
+            <p class="url">delete → { /api/employers/{id} }</p>
+          </div>
+        </div>
+        <div class="section">
+          <h3>All blogs</h3>
+          <div class="content">
+            <p class="url">get → { /api/blogs }</p>
+          </div>
+        </div>
+        <div class="section">
+          <h3>get blog</h3>
+          <div class="content">
+            <p class="url">get → { /api/blogs/{id} }</p>
+          </div>
+        </div>
+        <div class="section">
+          <h3>create blog (multipart form data)</h3>
+          <div class="content">
+            <p class="url">post → { /api/blogs }</p>
+            <div class="data">
+              <p class="state">category → required</p>
+              <p class="state">title → required</p>
+              <p class="state">is_paid → required</p>
+              <p class="state">section_title → required</p>
+              <p class="state">content → optional</p>
+              <p class="state">image → optional</p>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <h3>edit blog</h3>
+          <div class="content">
+            <p class="url">patch → { /api/blogs/{id} }</p>
+            <div class="data">
+              <p class="state">category → optional</p>
+              <p class="state">title → optional</p>
+              <p class="state">is_paid → optional</p>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <h3>delete blog</h3>
+          <div class="content">
+            <p class="url">delete → { /api/blogs/{id} }</p>
+          </div>
+        </div>
+        <div class="section">
+          <h3>All blog sections</h3>
+          <div class="content">
+            <p class="url">get → { /api/blogs/{blog_id}/sections }</p>
+          </div>
+        </div>
+        <div class="section">
+          <h3>blog section</h3>
+          <div class="content">
+            <p class="url">
+              get → { /api/blogs/{blog_id}/sections/{section_id} }
+            </p>
+          </div>
+        </div>
+        <div class="section">
+          <h3>create blog section (multipart form data)</h3>
+          <div class="content">
+            <p class="url">post → { /api/blogs/{id}/sections }</p>
+            <div class="data">
+              <p class="state">section_title → required</p>
+              <p class="state">content → optional</p>
+              <p class="state">image → optional</p>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <h3>edit blog section (multipart form data)</h3>
+          <div class="content">
+            <p class="url">
+              post → { /blogs/{blog_id}/sections/{section_id}/update }
+            </p>
+            <div class="data">
+              <p class="state">section_title → optional</p>
+              <p class="state">content → optional</p>
+              <p class="state">image → optional</p>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <h3>delete blog section</h3>
+          <div class="content">
+            <p class="url">
+              delete → { /api/blogs/{blog_id}/sections/{section_id} }
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
